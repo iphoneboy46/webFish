@@ -65,15 +65,13 @@ function menuMobile() {
     menuICON.style.display = "none";
     menuEX.style.display = "block";
     menuMobile.style.right = "0%";
-    document.body.style.overflow="hidden";
+    document.body.overflow="hidden";
   };
 
   menuEX.onclick = () => {
     menuICON.style.display = "block";
     menuEX.style.display = "none";
     menuMobile.style.right = "-100%";
-    document.body.style.overflow="auto";
-
   };
 
   const dropdownMobile = document.querySelector(".dropdown-mobile");

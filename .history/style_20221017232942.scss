@@ -674,6 +674,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
     }
 
     .mobile-icon {
@@ -731,6 +732,7 @@
                         margin-left: 8px;
                     }
                 }
+              
             }
 
             .active-menuChildren {
@@ -1108,8 +1110,6 @@
                 width: 80%;
                 margin: auto;
                 overflow-x: scroll;
-                scroll-snap-type: x mandatory;
-                scroll-behavior: smooth;
                 &::-webkit-scrollbar {
                     width: 10px;
                     height: 10px;
@@ -1122,9 +1122,7 @@
                 }
             }
 
-            .section-btn {
-                display: none;
-            }
+
 
             &--grid {
                 width: 100%;
@@ -1410,6 +1408,7 @@
                         margin-left: 8px;
                     }
                 }
+              
             }
 
             .active-menuChildren {

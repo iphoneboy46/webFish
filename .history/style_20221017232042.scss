@@ -430,6 +430,8 @@
             width: 100%;
             padding: 50px 0 10px 0;
             display: grid;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
             grid-template-columns: repeat(12, 1fr);
             grid-template-rows: repeat(200px);
             background-color: white;
@@ -674,17 +676,27 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+
+
+        &.sticky {
+            background-color: white;
+            height: 40px;
+        }
     }
 
     .mobile-icon {
-        display: block !important;
+        display: block;
+        & > .fa-xmark {
+            display: none;
+        }
     }
 
     .header__menu--list-mobile {
         background-color: white;
         right: -100%;
         top: 80px;
-        width: 50%;
+        width: 100%;
         height: 100vh;
         position: fixed;
         display: flex;
@@ -731,6 +743,7 @@
                         margin-left: 8px;
                     }
                 }
+              
             }
 
             .active-menuChildren {
@@ -765,7 +778,7 @@
         }
 
         &--list {
-            display: none;
+            display: flex;
             align-items: center;
             justify-content: space-between;
             list-style: none;
@@ -1108,8 +1121,6 @@
                 width: 80%;
                 margin: auto;
                 overflow-x: scroll;
-                scroll-snap-type: x mandatory;
-                scroll-behavior: smooth;
                 &::-webkit-scrollbar {
                     width: 10px;
                     height: 10px;
@@ -1122,15 +1133,13 @@
                 }
             }
 
-            .section-btn {
-                display: none;
-            }
-
             &--grid {
                 width: 100%;
                 padding: 50px 0 10px 0;
                 display: grid;
-                grid-template-columns: repeat(24, 1fr);
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                grid-template-columns: repeat(12, 1fr);
                 grid-template-rows: repeat(200px);
                 background-color: white;
                 gap: 10px;
@@ -1150,8 +1159,8 @@
                 }
 
                 &-item {
-                    width: 300px;
-                    height: 300px;
+                    width: 200px;
+                    height: 200px;
                     overflow: hidden;
                     scroll-snap-align: start;
                     scroll-snap-stop: always;
@@ -1410,6 +1419,7 @@
                         margin-left: 8px;
                     }
                 }
+              
             }
 
             .active-menuChildren {

@@ -430,6 +430,8 @@
             width: 100%;
             padding: 50px 0 10px 0;
             display: grid;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
             grid-template-columns: repeat(12, 1fr);
             grid-template-rows: repeat(200px);
             background-color: white;
@@ -674,74 +676,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+
+
+        &.sticky {
+            background-color: white;
+            height: 40px;
+        }
     }
 
     .mobile-icon {
-        display: block !important;
-    }
-
-    .header__menu--list-mobile {
-        background-color: white;
-        right: -100%;
-        top: 80px;
-        width: 50%;
-        height: 100vh;
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
-        z-index: 10000;
-        list-style: none;
-        padding: 20px;
-        text-transform: uppercase;
-        transition: all 0.5s linear;
-
-        & > .header__menu--mobile {
-            margin-bottom: 20px;
-
-            & > a {
-                color: #000;
-                text-decoration: none;
-                font-size: 20px;
-            }
-
-            & > i {
-                margin-left: 5px;
-                font-size: 25px;
-                color: #000;
-            }
-
-            .menu--children-mobile {
-                list-style: none;
-                transition: all 0.5s linear;
-                display: none;
-                opacity: 0;
-                color: black;
-                margin-left: 10px;
-
-                & > li,
-                a {
-                    margin: 10px 0;
-                    color: black;
-                    font-size: 18px;
-
-                    & > i {
-                        font-size: 20px;
-                        margin-left: 8px;
-                    }
-                }
-            }
-
-            .active-menuChildren {
-                display: block;
-                opacity: 1;
-            }
-
-            .active-menuChildren-children {
-                display: block;
-                opacity: 1;
-            }
+        display: none;
+        & > .fa-xmark {
+            display: none;
         }
     }
 
@@ -765,7 +712,7 @@
         }
 
         &--list {
-            display: none;
+            display: flex;
             align-items: center;
             justify-content: space-between;
             list-style: none;
@@ -1108,8 +1055,6 @@
                 width: 80%;
                 margin: auto;
                 overflow-x: scroll;
-                scroll-snap-type: x mandatory;
-                scroll-behavior: smooth;
                 &::-webkit-scrollbar {
                     width: 10px;
                     height: 10px;
@@ -1122,15 +1067,13 @@
                 }
             }
 
-            .section-btn {
-                display: none;
-            }
-
             &--grid {
                 width: 100%;
                 padding: 50px 0 10px 0;
                 display: grid;
-                grid-template-columns: repeat(24, 1fr);
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                grid-template-columns: repeat(12, 1fr);
                 grid-template-rows: repeat(200px);
                 background-color: white;
                 gap: 10px;
@@ -1150,8 +1093,8 @@
                 }
 
                 &-item {
-                    width: 300px;
-                    height: 300px;
+                    width: 200px;
+                    height: 200px;
                     overflow: hidden;
                     scroll-snap-align: start;
                     scroll-snap-stop: always;
@@ -1338,7 +1281,7 @@
 }
 
 //mobile
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .header {
         position: fixed;
         z-index: 1000;
@@ -1410,6 +1353,7 @@
                         margin-left: 8px;
                     }
                 }
+              
             }
 
             .active-menuChildren {

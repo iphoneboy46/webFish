@@ -72,8 +72,6 @@ function menuMobile() {
     menuICON.style.display = "block";
     menuEX.style.display = "none";
     menuMobile.style.right = "-100%";
-    document.body.style.overflow="auto";
-
   };
 
   const dropdownMobile = document.querySelector(".dropdown-mobile");
