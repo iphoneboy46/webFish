@@ -1,0 +1,1 @@
+const slider-list = document.querySelectorAll('.header__slider--list')

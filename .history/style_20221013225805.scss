@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&family=Righteous&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+
+.header{
+    position: relative;
+}
+
+
+.header__menu {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    z-index: 100;
+
+    & >.header__menu--list >.header__menu--items-dropdown:hover ~ .header__menu--dropdown{
+        top: 6%;
+        left: 53%;
+    }
+
+    &--logo {
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+    &--list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+        margin-top: 20px;
+        z-index: 100;
+
+
+        & li span {
+            margin-right: 50px;
+            color: #6d6d6d;
+            text-transform: uppercase;
+        }
+    }
+
+    &--items a {
+        margin-right: 50px;
+        color: #6d6d6d;
+        text-transform: uppercase;
+        text-decoration: none !important;
+        z-index: 10;
+    }
+
+
+    &--items.active a {
+        color: #2A97E0;
+    }
+
+    &--items-dropdown {
+        position: relative;
+        transition: all 0.5s linear;
+        
+    }
+
+    &--items-dropdown i {
+        position: absolute;
+        top: 0px;
+        left: 30%;
+        color: #2A97E0;
+        transform: translate(-50%, -50%)
+    }
+}
+
+.header__menu--dropdown {
+    list-style: none;
+    position: absolute;
+    background-color: #0192d7;
+    z-index: 20;
+    padding: 10px 25px;
+    top: -100%;
+    left: 54%;
+    transition: all 0.5s linear;
+    opacity: 1;
+    
+
+
+    & i {
+        color: white;
+        font-size: 30px;
+        margin-left: 30px;
+        margin-top: -5px;
+    }
+
+    & li {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & li:nth-child(3) {
+        border-top: 1px solid #2faade;
+        border-bottom: 1px solid #2faade;
+    }
+
+
+    & li a {
+        text-align: center;
+        margin: 12px;
+        color: white;
+    }
+}
+
+
+
+
+
+.header__slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url("https://livedemo00.template-help.com/wt_51730/img/wave.png");
+        top: 85%;
+        left: 10%;
+        z-index: 50;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+
+    &--list {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    &--item {
+        transition: all linear 0.5s;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            text-transform: uppercase;
+
+
+            & span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            & span h1 {
+                color: white;
+                text-decoration: none;
+                font-size: 72px;
+                text-align: center;
+            }
+
+
+            & span a {
+                color: #8AD8D7;
+                text-decoration: none;
+                font-size: 50px;
+                text-align: center;
+            }
+
+            & span i {
+
+                color: white;
+                text-decoration: none;
+                font-size: 50px;
+                text-align: center;
+            }
+
+            & h1 {
+                font-family: 'Righteous', cursive;
+                text-align: center;
+                color: white;
+                font-weight: border;
+                font-size: 100px;
+            }
+        }
+    }
+
+
+
+    &--navigation {
+        position: absolute;
+        display: flex;
+        top: 90%;
+        left: 85%;
+        z-index: 55;
+
+        .button-slider {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: white;
+            border: 3px solid lightgray;
+            margin-left: 5px;
+
+            &.active {
+
+                border: 3px solid #8DD5D9;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header__menu {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+
+
+    &--logo {
+
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+
+
+    &--list {
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        & li a {
+            margin-right: 50px;
+            color: #6d6d6d;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        & li span {
+            margin-right: 50px;
+            color: #6d6d6d;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+
+.header__slider {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+
+    &--list {
+        width: 400%;
+        height: 100%;
+        display: flex;
+
+        & input {
+            display: none;
+        }
+    }
+
+    &--item {
+        transition: all linear 0.5s;
+        width: 25%;
+        opacity: 1;
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+    &--navigation {
+        position: absolute;
+        display: flex;
+        top: 30%;
+        left: 50%;
+        z-index: 10;
+
+        .button-slider {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            border: 3px solid #e5e5e5;
+        }
+
+    }
+
+
+
+}

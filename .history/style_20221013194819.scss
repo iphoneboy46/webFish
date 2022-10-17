@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&family=Righteous&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header__menu {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+
+
+    &--logo {
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+    &--list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+        margin-top: 20px;
+
+
+        & li a {
+            margin-right: 50px;
+            color: #6d6d6d;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        & li span {
+            margin-right: 50px;
+            color: #6d6d6d;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+.header__slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    &--list {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    &--item {
+        transition: all linear 0.5s;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            & span  {
+                display: flex;
+                justify-content:center;
+                align-items: center;
+            }
+
+
+            & span a {
+                color: #8AD8D7;
+                text-decoration: none;
+                font-size: 50px;
+                text-align: center;
+            }
+
+            & span i {
+
+                color: white;
+                text-decoration: none;
+                font-size: 50px;
+                text-align: center;
+            }
+
+            & h1 {
+                text-align: center;
+                color: white;
+                font-weight: border;
+                font-size: 100px;
+            }
+        }
+    }
+
+
+
+    &--navigation {
+        position: absolute;
+        display: flex;
+        top: 80%;
+        left: 50%;
+        z-index: 10;
+
+        .button-slider {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: white;
+            border: 3px solid lightgray;
+            margin-left: 5px;
+
+            &.active {
+
+                border: 3px solid #8DD5D9;
+
+            }
+        }
+    }
+}

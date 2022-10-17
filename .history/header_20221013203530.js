@@ -1,0 +1,1 @@
+const linkHeader = document.querySelectorAll('header__menu--list a')

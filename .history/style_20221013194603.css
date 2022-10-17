@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.header__menu {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+.header__menu--logo img {
+  width: 100%;
+  height: 100%;
+}
+.header__menu--list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin-top: 20px;
+}
+.header__menu--list li a {
+  margin-right: 50px;
+  color: #6d6d6d;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.header__menu--list li span {
+  margin-right: 50px;
+  color: #6d6d6d;
+  text-transform: uppercase;
+}
+
+.header__slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.header__slider--list {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.header__slider--item {
+  transition: all linear 0.5s;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.header__slider--item.active {
+  opacity: 1;
+  visibility: visible;
+}
+.header__slider--item img {
+  width: 100%;
+  height: 100%;
+}
+.header__slider--item-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header__slider--item-text span a {
+  color: #8AD8D7;
+  text-decoration: none;
+  font-size: 50px;
+  text-align: center;
+}
+.header__slider--item-text span i {
+  color: #8AD8D7;
+  text-decoration: none;
+  font-size: 50px;
+  text-align: center;
+}
+.header__slider--item-text h1 {
+  text-align: center;
+  color: white;
+  font-weight: border;
+  font-size: 100px;
+}
+.header__slider--navigation {
+  position: absolute;
+  display: flex;
+  top: 80%;
+  left: 50%;
+  z-index: 10;
+}
+.header__slider--navigation .button-slider {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  border: 3px solid lightgray;
+  margin-left: 5px;
+}
+.header__slider--navigation .button-slider.active {
+  border: 3px solid #8DD5D9;
+}/*# sourceMappingURL=style_20221013194603.css.map */
